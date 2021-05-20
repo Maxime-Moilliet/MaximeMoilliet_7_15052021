@@ -1,3 +1,5 @@
+import {filterRecipes} from "./filterRecipes.js";
+
 const State = {
   filterText: "",
   optionsFilter: {
@@ -26,6 +28,7 @@ function addOptionsFilter(e, type) {
         default: 
             throw new Error("type inconnu impossible d'ajouter une option");
     }
+    filterRecipes(State);
 }
 
 /**
@@ -51,6 +54,7 @@ function removeOptionsFilter(e, type) {
         default :
             throw new Error("type inconnu impossible de supprimer une option")
     }
+    filterRecipes(State);
 }
 
 /**
@@ -65,6 +69,7 @@ function handleChangeFilterText(e) {
         const recipesCards = document.querySelectorAll(".recipe");
         recipesCards.forEach(recipe => recipe.style.display = "block");
     }
+    filterRecipes(State);
 }
 
 export {
