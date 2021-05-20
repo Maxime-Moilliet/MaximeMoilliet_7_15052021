@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Les petits plats</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__logo" src="./images/logo.png" alt="Logo" />
+        <h1 class="header__title">Les petits plats</h1>
+    </header>
+
+
+    <section class="container">
+        <section class="searchBar">
+            <input class="searchBar__input" type="text" id="filterText"
+                placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" />
+            <i class="fas fa-search search"></i>
+        </section>
+
+        <section class="filters"></section>
+
+        <section class="optionFilter__container">
+            <article class="btn btn-ingredients">
+                <div class="optionFilter__head-top">
+                    <p class="optionFilter__title">Ingrédients</p>
+                    <i class="fas fa-angle-down optionFilter__icon"></i>
+                </div>
+                <div class="optionFilter__head-down active">
+                    <input class="optionFilter__input optionFilter__input-ingredients" type="text"
+                        placeholder="Rechercher un ingredient" id="btnInput-ingredients" />
+                    <span><i class=" fas fa-angle-up optionFilter__icon"></i></span>
+                </div>
+                <div class="optionFilter__items" id="optionFilter__items-ingredients">
+                    <ul id="ingredients">
+                    </ul>
+                </div>
+            </article>
+
+            <article class="btn btn-appliances">
+                <div class="optionFilter__head-top">
+                    <p class="optionFilter__title">Appareils</p>
+                    <i class="fas fa-angle-down optionFilter__icon"></i>
+                </div>
+                <div class="optionFilter__head-down active">
+                    <input class="optionFilter__input optionFilter__input-appliances" type="text"
+                        placeholder="Rechercher un appareil" id="btnInput-appliances" />
+                    <span><i class=" fas fa-angle-up optionFilter__icon"></i></span>
+                </div>
+                <div class="optionFilter__items" id="optionFilter__items-appliances">
+                    <ul id="appliances">
+                    </ul>
+                </div>
+            </article>
+
+            <article class="btn btn-ustensils">
+                <div class="optionFilter__head-top">
+                    <p class="optionFilter__title">Ustensiles</p>
+                    <i class="fas fa-angle-down optionFilter__icon"></i>
+                </div>
+                <div class="optionFilter__head-down active">
+                    <input class="optionFilter__input optionFilter__input-ustensils" type="text"
+                        placeholder="Rechercher un ustensile" id="btnInput-ustensils" />
+                    <span><i class=" fas fa-angle-up optionFilter__icon"></i></span>
+                </div>
+                <div class="optionFilter__items" id="optionFilter__items-ustensils">
+                    <ul id="ustensils">
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </section>
+
+    <main class="recipes"></main>
+
+    <div class="noRecipes">
+        <p class="noRecipes__message">Aucune recette ne correspond à votre recherche...</p>
+    </div>
+
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>

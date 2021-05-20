@@ -1,0 +1,411 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: "Lato", sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+  color: #000;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+*:focus {
+  outline: none;
+}
+
+.header {
+  margin-top: 40px;
+}
+.header__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-family: "DM-sans", sans-serif;
+  color: #D04F4F;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  margin-bottom: 20px;
+}
+.header__logo {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.searchBar__input {
+  width: 100%;
+  padding: 22px;
+  background-color: #E7E7E7;
+  border: none;
+  font-size: 1.8rem;
+}
+.searchBar .search {
+  font-size: 3rem;
+  position: absolute;
+  right: 11.5%;
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
+  padding: 20px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
+  width: max-content;
+  min-width: 170px;
+}
+.btn-ingredients {
+  background-color: #3282F7;
+}
+.btn-appliances {
+  background-color: #68D9A4;
+}
+.btn-ustensils {
+  background-color: #ED6454;
+}
+
+.optionFilter__head-top.active, .optionFilter__head-down.active {
+  display: none;
+}
+.optionFilter__container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.optionFilter__head-top, .optionFilter__head-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.optionFilter__title {
+  margin-right: 40px;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: inherit;
+}
+.optionFilter__icon {
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 10px;
+}
+.optionFilter__input {
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 10px;
+  margin-right: 10px;
+}
+.optionFilter__input::placeholder {
+  opacity: 0.5;
+  color: #ffffff;
+}
+.optionFilter__input-ingredients, .optionFilter__input-appliances, .optionFilter__input-ustensils {
+  color: #ffffff;
+  opacity: 1;
+}
+.optionFilter__input-ingredients {
+  background-color: #3282F7;
+}
+.optionFilter__input-appliances {
+  background-color: #68D9A4;
+}
+.optionFilter__input-ustensils {
+  background-color: #ED6454;
+}
+.optionFilter__items.active {
+  display: block;
+}
+.optionFilter__items {
+  display: none;
+  align-items: flex-start;
+}
+.optionFilter__items ul li:first-child {
+  margin-top: 20px;
+}
+.optionFilter__items ul > * + * {
+  margin-right: 50px;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.optionFilter__items ul li span {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.optionFilter__items ul li span:hover {
+  opacity: 0.5;
+}
+.optionFilter__items ul li {
+  text-align: left;
+  width: 200px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
+}
+.filter-ingredients {
+  background-color: #3282F7;
+}
+.filter-appliances {
+  background-color: #68D9A4;
+}
+.filter-ustensils {
+  background-color: #ED6454;
+}
+.filter__name {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-right: 15px;
+}
+.filter__icon {
+  font-size: 2.3rem;
+  color: #ffffff;
+}
+
+.recipes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 125px;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.recipe {
+  border-radius: 5px;
+  width: 380px;
+  background-color: #E7E7E7;
+}
+.recipe__img {
+  width: 100%;
+  height: 175px;
+  background-color: #C7BEBE;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.recipe__head {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recipe__title {
+  max-width: 220px;
+}
+.recipe__title, .recipe__time {
+  font-size: 1.8rem;
+  font-family: "Lato", sans-serif;
+}
+.recipe__icon {
+  font-size: 1.8rem;
+  margin-right: 7px;
+  font-weight: 500;
+}
+.recipe__time {
+  font-weight: 700;
+}
+.recipe__body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0px 20px;
+  margin-bottom: 20px;
+}
+.recipe__ingredients {
+  margin-top: 5px;
+  max-width: 150px;
+}
+.recipe__ingredients, .recipe__ingredient {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+}
+.recipe__ingredient {
+  font-weight: 700;
+}
+.recipe__description {
+  max-width: 170px;
+  font-size: 1.2rem;
+  font-family: "Lato", sans-serif;
+  max-height: 98px;
+  overflow: hidden;
+  line-height: 1.44rem;
+}
+
+.noRecipes {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 120px;
+}
+.noRecipes__message {
+  font-family: "Lato", sans-serif;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

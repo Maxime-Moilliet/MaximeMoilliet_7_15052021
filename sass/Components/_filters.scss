@@ -1,0 +1,38 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-family: $font;
+
+  &-ingredients {
+    background-color: $color-ingredients;
+  }
+  &-appliances {
+    background-color: $color-appliances;
+  }
+  &-ustensils {
+    background-color: $color-ustensils;
+  }
+
+  &__name {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-right: 15px;
+  }
+
+  &__icon {
+    font-size: 2.3rem;
+    color: #ffffff;
+  }
+}
