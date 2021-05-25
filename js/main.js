@@ -1,7 +1,8 @@
 import {recipes} from "./bdd.js"
 import {listLi, OpenFilter} from "./filter.js";
 import {handleChangeFilterText} from "./state.js";
-import {createCardRecipe} from "./recipes.js";
+import {filterRecipes} from "./filterRecipes.js";
+import {State} from "./state.js";
 
 // SerachBar 
 const inputText = document.querySelector(".searchBar__input");
@@ -12,10 +13,5 @@ OpenFilter("ingredients");
 OpenFilter("appliances");
 OpenFilter("ustensils");
 
-// Recipes cards and Li list (ingredients...)
-createCardsRecipes(recipes)
-function createCardsRecipes(recipes) {
-    recipes.forEach(recipe => createCardRecipe(recipe));
-}
+filterRecipes(State);
 listLi(recipes);
-
