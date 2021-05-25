@@ -1,3 +1,7 @@
+import {filterRecipes} from "./filterRecipes.js";
+import {listLi} from "./filter.js";
+import {recipes} from "./bdd.js";
+
 const State = {
   filterText: "",
   optionsFilter: {
@@ -26,6 +30,8 @@ function addOptionsFilter(e, type) {
         default: 
             throw new Error("type inconnu impossible d'ajouter une option");
     }
+    filterRecipes(State);
+    listLi(recipes);
 }
 
 /**
@@ -51,6 +57,8 @@ function removeOptionsFilter(e, type) {
         default :
             throw new Error("type inconnu impossible de supprimer une option")
     }
+    filterRecipes(State);
+    listLi(recipes);
 }
 
 /**
@@ -65,6 +73,8 @@ function handleChangeFilterText(e) {
         const recipesCards = document.querySelectorAll(".recipe");
         recipesCards.forEach(recipe => recipe.style.display = "block");
     }
+    listLi(recipes);
+    filterRecipes(State);
 }
 
 export {
